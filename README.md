@@ -1,7 +1,7 @@
 # 📚 Flask Web App – Mini Bookstore Demo
 
 A cool app that scrapes book info from a website, stores it in a database, and shows it on a simple web page.  
-It’s like a mini online bookstore! 😍
+It’s like a mini online bookstore! 
 
 ![screenshot](preview.png) <!-- replace preview.png with your image file name -->
 
