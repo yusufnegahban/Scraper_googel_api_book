@@ -26,7 +26,7 @@ You are getting `ModuleNotFoundError: No module named 'app'` because Python does
 Before running your script, set the `PYTHONPATH` to your project root:
 
 ```powershell
-$env:PYTHONPATH = "D:\manager_Safak\googel_book"
+$env:PYTHONPATH = "D:\manager_k\googel_book"
 python app/scraper.py
 ```
 
