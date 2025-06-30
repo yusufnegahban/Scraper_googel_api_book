@@ -1,3 +1,6 @@
+
+#SCRAPER data book from API googel book
+
 import time
 import requests
 from requests.exceptions import RequestException
