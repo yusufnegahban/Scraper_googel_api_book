@@ -146,5 +146,17 @@ The message **"Not Found. The requested URL was not found on the server."** mean
 - Restart your app and try again.
 
 -----------------------------
+# 🚀 Upload Project Folder to GitHub
 
+### 1️⃣ Open terminal in your project folder:
+
+```bash
+git init
+git add .
+git commit -m "first commit"
+
+2️⃣ Create a new repo on GitHub. Copy its URL.
+3️⃣ Back in terminal:
+git remote add origin <your-repo-url>
+git push -u origin main
 
