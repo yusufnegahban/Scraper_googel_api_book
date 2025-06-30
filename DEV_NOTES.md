@@ -208,5 +208,20 @@ Just change the number in `max_pages` to your desired amount!
 @main_bp.route("/")
 def home():
 ```
+**🔍 What this function does:**
+📄 Gets the current page number from the URL:
+?page=2 → loads page 2
 
+🧑‍💻 Gets the search query (optional):
+?q=python → filters books with "python" in title or author
+
+📚 Filters books by title or author (case-insensitive)
+
+📦 Paginates results:
+Shows 10 books per page
+
+**🎨 Renders the HTML page using:**
+```python
+index.html
+```
 
