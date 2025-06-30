@@ -14,6 +14,20 @@ It’s like a mini online bookstore!
 ---
 
 ## 🚀 What We Did
+**Flask App Structure 📚**
+
+-The create_app function builds the Flask app foundation 🏛️:
+
+-Sets up the app with a PostgreSQL database connection 🗄️.
+
+-Fetches data using a scraper from the Google Books API 📦.
+
+**Displays data via:**
+
+Route (main_bp): Shows books in a pretty HTML page 🌐.
+
+API (api_bp): Sends raw JSON data for other apps 🚀.
+
 
 ### 1️⃣ Data Scraping
 - Used **Python**, `requests`, and `BeautifulSoup` to grab book info from [books.toscrape.com](http://books.toscrape.com)
