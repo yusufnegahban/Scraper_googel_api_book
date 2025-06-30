@@ -159,4 +159,46 @@ git commit -m "first commit"
 3️⃣ Back in terminal:
 git remote add origin <your-repo-url>
 git push -u origin main
+--------------------------------------
+-----------------
+Great! Your code is working and scraping 18 books.  
+If you want to scrape **more books**, you need to increase the `max_pages` parameter in your function call.
 
+For example, to scrape 100 books (10 books per page × 10 pages):
+
+```python
+if __name__ == "__main__":
+    app = create_app()
+    with app.app_context():
+        scrape_books_from_google_api(max_pages=10)  # Scrape 10 pages (about 100 books)
+```
+
+You can set `max_pages` to any number you want.  
+**Each page usually returns up to 10 books.**
+
+If you want to scrape, for example, 50 pages (about 500 books):
+
+```python
+scrape_books_from_google_api(max_pages=50)
+```
+
+Just change the number in `max_pages` to your desired amount!
+
+----------------------------
+### 1. **scraper.py**
+- You run `scraper.py` **only when you want to fetch (scrape) new books from Google and save them to your database**.
+- This script is for updating your database with new data.
+
+---
+
+### 2. **run.py**
+- You run run.py **to start your Flask web app** and show the data (books) in your browser.
+- This script is for running your website and displaying the books already in your database.
+
+---
+
+**Summary:**  
+- To **scrape new data**: run `scraper.py`
+- To **show data on your app**: run run.py
+  -----------------------------------
+  
