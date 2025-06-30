@@ -201,4 +201,32 @@ Just change the number in `max_pages` to your desired amount!
 - To **scrape new data**: run `scraper.py`
 - To **show data on your app**: run run.py
   -----------------------------------
-  
+  -----------------------------
+  🚀 Flask Route: Home Page
+
+@main_bp.route("/")
+def home():
+🔍 What this function does:
+📄 Gets the current page number from the URL:
+?page=2 → loads page 2
+
+🧑‍💻 Gets the search query (optional):
+?q=python → filters books with "python" in title or author
+
+📚 Filters books by title or author (case-insensitive)
+
+📦 Paginates results:
+Shows 10 books per page
+
+🎨 Renders the HTML page using:
+
+html
+Copy
+Edit
+index.html
+🧾 Example URL Usage:
+kotlin
+Copy
+Edit
+/?page=3&q=data
+👉 Shows page 3 of books related to "data
