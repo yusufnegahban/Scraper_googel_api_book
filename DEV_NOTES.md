@@ -229,4 +229,6 @@ index.html
 A Flask route (/) that renders an HTML page (index.html) showing books with pagination (10 per page). Users can search by title/author, and it’s designed for humans browsing a pretty web page. 📚🖼️
 
 A Flask API route (/api/books) that returns a JSON list of all matching books (title, author, published date, ISBN, price) without pagination. Built for apps or developers needing raw data. 📦💾
-------------------------------------------
+
+
+--------------------------------------
