@@ -1,3 +1,4 @@
+#creat html page for users in broswer
 from flask import Blueprint, render_template, request
 from app.models import Book
 
