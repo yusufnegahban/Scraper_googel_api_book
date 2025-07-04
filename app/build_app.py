@@ -12,7 +12,7 @@ def create_app():
 
     db.init_app(app)
 
-    from .routes import main_bp
+    from .SearchBooksWeb import main_bp
     app.register_blueprint(main_bp)
 
     from .api import api_bp  # Add the API blueprint
