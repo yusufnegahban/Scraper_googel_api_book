@@ -1,6 +1,6 @@
 ## step 2:
 
-📊 Step 3: Data Visualization with Apache Superset
+📊  Data Visualization with Apache Superset
 ✅ Prerequisites & Environment Setup
 bash
 Copy
