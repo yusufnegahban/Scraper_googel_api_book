@@ -90,3 +90,141 @@ pip install -r requirements.txt
 
 # 4. Run the app
 python app.py
+
+
+step 2:
+
+📘 Superset + Spark + PostgreSQL Project Summary
+A full week of data engineering & visualization steps
+
+⚙️ Part 1: Spark + PostgreSQL Integration
+🔧 Environment Setup
+powershell
+Copy
+Edit
+$env:JAVA_HOME
+& "$env:JAVA_HOME\bin\java.exe" -version
+
+$env:HADOOP_HOME
+& "$env:HADOOP_HOME\bin\winutils.exe" ls
+
+$env:SPARK_HOME
+& "$env:SPARK_HOME\bin\spark-shell.cmd"
+✅ Sample Output
+text
+Copy
+Edit
+Welcome to Spark 4.0.0
+Spark context available as 'sc'
+Spark session available as 'spark'
+🐘 PostgreSQL + Spark via JDBC
+✅ Fixed missing driver: ClassNotFoundException: org.postgresql.Driver
+
+🔗 Added .jar via spark.jars.packages
+
+✅ Read data using:
+
+scala
+Copy
+Edit
+spark.read
+  .format("jdbc")
+  .option("url", "jdbc:postgresql://localhost:5432/books_data")
+  .option("dbtable", "books")
+  .option("user", "postgres")
+  .option("password", "your_password")
+  .load()
+📊 Aggregated book sales by year in PySpark
+
+📁 Saved output to PostgreSQL: sales_summary table
+
+📊 Part 2: Superset Installation & Visualization
+🧰 Superset Setup (Virtualenv)
+bash
+Copy
+Edit
+pip install apache-superset
+superset db upgrade
+superset fab create-admin
+superset init
+superset run -p 8088
+🧱 (Optional) Frontend Build
+bash
+Copy
+Edit
+yarn install
+yarn build
+🐘 PostgreSQL Connection
+➕ Added Database:
+postgresql://postgres:your_password@localhost:5432/books_data
+
+✅ Clicked "Test Connection" → Success
+
+🔄 Created Dataset from sales_summary table
+
+📈 Chart Creation Example
+Chart Type: Bar Chart
+Dataset: sales_summary
+
+Setting	Value
+X-Axis	year
+Y-Axis (Metric)	total_quantity
+Filters	none
+Limit	1000
+
+✅ Saved chart → Added to dashboard: "Book Sales Overview"
+
+🐞 Top Connection Errors (PowerShell)
+❌ Error: Could not locate a Flask application
+✅ Fix:
+
+powershell
+Copy
+Edit
+$env:FLASK_APP="superset"
+superset run -p 8088 --with-threads --reload --debugger
+❌ psycopg2 not found
+✅ Fix:
+
+bash
+Copy
+Edit
+pip install psycopg2-binary
+❌ Database not shown in SQL Lab
+✅ Fix:
+
+Reload metadata
+
+Ensure table is saved as a dataset
+
+Assign correct schema
+
+❌ Address already in use
+✅ Fix:
+
+bash
+Copy
+Edit
+taskkill /F /IM python.exe
+✅ Recap Workflow
+css
+Copy
+Edit
+PostgreSQL → PySpark → Aggregated Data → Saved to DB → Superset → Chart → Dashboard
+🔐 Login Flow
+Localhost: http://localhost:8088
+
+Admin: Created via superset fab create-admin
+
+Data loaded with:
+
+bash
+Copy
+Edit
+superset load_examples
+🧠 Bonus Tips
+✅ Run Superset from root folder: .superset
+
+⚠ If debugger needed, always set FLASK_APP
+
+🧹 Clear browser cache for CSRF/login issues
