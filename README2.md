@@ -29,9 +29,24 @@ superset init
 🚀 Running Superset (without Docker)
 
 superset run -p 8088 --with-threads --reload --debugger
+
 ---
----
----
+
+Top Connection Errors (PowerShell)
+❌ Error: Could not locate a Flask application
+✅ Fix:
+
+powershell
+Copy
+Edit
+$env:FLASK_APP="superset" superset run -p 8088 --with-threads --reload --debugger
+❌ psycopg2 not found
+✅ Fix:
+
+bash
+Copy
+Edit
+pip install psycopg2-binary
 
 
 
