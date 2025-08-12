@@ -50,7 +50,22 @@ pip install psycopg2-binary
 ---
 
 
+📥 Connecting Superset to PostgreSQL
+Fill these fields via Superset > Settings > Database > + Database:
 
+Database Name: books_data
+
+Host: localhost
+
+Port: 5432
+
+Username: your_postgres_username
+
+Password: your_postgres_password
+
+Display Name: Books DB
+
+✅ Test Connection → then Save
 
 
 
