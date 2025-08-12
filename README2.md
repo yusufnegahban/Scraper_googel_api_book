@@ -67,5 +67,21 @@ Display Name: Books DB
 
 ✅ Test Connection → then Save
 
-
+---
+---
+---
+Troubleshooting Java/Spark for Superset-PySpark-Postgres
+Verify Java
+bash
+Copy
+Edit
+java -version
+$env:JAVA_HOME & "$env:JAVA_HOME\bin\java.exe" -version
+Add PostgreSQL JDBC in Spark
+python
+Copy
+Edit
+spark = SparkSession.builder \
+    .config("spark.jars.packages", "org.postgresql:postgresql:42.2.27") \
+    .getOrCreate()
 
