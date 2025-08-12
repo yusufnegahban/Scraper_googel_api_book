@@ -1,8 +1,6 @@
 
-    ...
-
-
     # Step 2:  
+    
 📊 **Data Visualization with Apache Superset**  
 
 ---
@@ -30,6 +28,7 @@ superset init
 
 superset run -p 8088 --with-threads --reload --debugger
 
+
 ---
 
 Top Connection Errors (PowerShell)
@@ -48,7 +47,7 @@ Copy
 Edit
 pip install psycopg2-binary
 
-
+---
 
 
 
