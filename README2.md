@@ -13,11 +13,13 @@ python -m venv venv
 pip install apache-superset
 
 # Initialize Superset
-superset db upgrade
-
-superset fab create-admin
-superset init
 ℹ️ Ensure PostgreSQL is running and accessible before launching Superset.
+--superset db upgrade
+--superset fab create-admin
+--superset init
+
+
+
 
 🚀 Running Superset (without Docker)
 bash
