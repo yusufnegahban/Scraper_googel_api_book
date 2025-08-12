@@ -69,8 +69,6 @@ Display Name: Books DB
 
 ---
 
-
----
 ##Troubleshooting Java/Spark for Superset-PySpark-Postgres
 Verify Java
 bash
@@ -87,6 +85,7 @@ spark = SparkSession.builder \
     .getOrCreate()
 
 ---
+
 ##Stage 3 – Airflow Environment Setup
 Navigate to project directory
 
