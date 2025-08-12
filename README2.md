@@ -70,7 +70,7 @@ Display Name: Books DB
 ---
 ---
 ---
-Troubleshooting Java/Spark for Superset-PySpark-Postgres
+###Troubleshooting Java/Spark for Superset-PySpark-Postgres
 Verify Java
 bash
 Copy
