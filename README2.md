@@ -30,21 +30,15 @@ superset init
 
 superset run -p 8088 --with-threads --reload --debugger
 
+🐞 Top Connection Errors (PowerShell)
+❌ Error: Could not locate a Flask application
+✅ Fix:
 
-⚠ Common Superset Connection Errors & Fixes
-Error Message	Cause	Fix
-Could not locate a Flask application	Wrong working directory or missing app config	Make sure you're in the virtual environment and run from the correct Superset folder:
-```bash
-source venv/bin/activate
-cd /path/to/superset_project
-superset run
-```
-psycopg2.errors.InvalidPassword	Wrong DB credentials	Double-check the username/password
-Driver not found or ClassNotFoundException: org.postgresql.Driver	PostgreSQL JDBC JAR missing for PySpark	Add JAR to Spark config:
-```bash
---packages org.postgresql:postgresql:42.2.27
-```
-No charts or datasets shown	Connection added but dataset not imported	Click ➕ next to the database, choose table, and click "Add"
+powershell
+Copy
+Edit
+$env:FLASK_APP="superset" superset run -p 8088 --with-threads --reload --debugger
+
 
 
 
