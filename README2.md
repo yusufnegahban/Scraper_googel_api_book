@@ -29,9 +29,14 @@ superset run -p 8088 --with-threads --reload --debugger
 ❗ Error Message	
 🔍 Reason	✅ Fix
 
-**Could not locate a Flask application**  
-Cause: Wrong working directory or missing app config  
-Solution: Ensure you're in the venv and run from a correct initialized Superset folder
+
+**Could not locate a Flask application**
+Cause: Wrong working directory or missing app config
+
+# Make sure you're in the virtual environment and run from the correct Superset folder
+source venv/bin/activate
+cd /path/to/superset_project
+superset run
 
 **psycopg2.errors.InvalidPassword**  
 Cause: Wrong DB credentials  
