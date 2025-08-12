@@ -68,9 +68,10 @@ Display Name: Books DB
 ✅ Test Connection → then Save
 
 ---
+
+
 ---
----
-###Troubleshooting Java/Spark for Superset-PySpark-Postgres
+##Troubleshooting Java/Spark for Superset-PySpark-Postgres
 Verify Java
 bash
 Copy
@@ -84,4 +85,31 @@ Edit
 spark = SparkSession.builder \
     .config("spark.jars.packages", "org.postgresql:postgresql:42.2.27") \
     .getOrCreate()
+
+---
+##Stage 3 – Airflow Environment Setup
+Navigate to project directory
+
+powershell
+Copy
+Edit
+cd D:\manager_Safak\googel_book\airflow_project
+Activate virtual environment
+
+powershell
+Copy
+Edit
+.\venv\Scripts\activate
+Set Airflow UID in .env file
+
+powershell
+Copy
+Edit
+Set-Content -Path .env -Value "AIRFLOW_UID=50000" -Encoding ASCII
+Initialize Airflow
+
+powershell
+Copy
+Edit
+docker-compose up airflow-init
 
