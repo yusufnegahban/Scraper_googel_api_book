@@ -26,31 +26,39 @@ superset run -p 8088 --with-threads --reload --debugger
 
 
 ⚠ Common Superset Connection Errors & Fixes
-❗ Error Message	🔍 Reason	✅ Fix
-Could not locate a Flask application	Wrong working directory or missing app config	Ensure you're in the venv and run from a correct initialized Superset folder
-psycopg2.errors.InvalidPassword	Wrong DB credentials	Double-check the username/password
-Driver not found or ClassNotFoundException: org.postgresql.Driver	PostgreSQL JDBC JAR missing for PySpark	Add JAR to Spark config:
+❗ Error Message	
+🔍 Reason	✅ Fix
+
+**Could not locate a Flask application**  
+Cause: Wrong working directory or missing app config  
+Solution: Ensure you're in the venv and run from a correct initialized Superset folder
+
+**psycopg2.errors.InvalidPassword**  
+Cause: Wrong DB credentials  
+Solution: Double-check the username/password
+
+**Driver not found or ClassNotFoundException: org.postgresql.Driver**  
+Cause: PostgreSQL JDBC JAR missing for PySpark  
+Solution: Add JAR to Spark config:  
 --packages org.postgresql:postgresql:42.2.27
-No charts or datasets shown	Connection added but dataset not imported	Click ➕ next to the database, choose table, and click "Add"
+
+**No charts or datasets shown**  
+Cause: Connection added but dataset not imported  
+Solution: Click ➕ next to the database, choose table, and click "Add"
+
 
 🐞 Top Connection Errors (PowerShell)
 ❌ Error: Could not locate a Flask application
 ✅ Fix:
 
 powershell
-Copy
-Edit
+
 $env:FLASK_APP="superset"
 superset run -p 8088 --with-threads --reload --debugger
 ❌ psycopg2 not found
 ✅ Fix:
 
-bash
-Copy
-Edit
 pip install psycopg2-binary
-
-
 
 
 📥 Connecting Superset to PostgreSQL
@@ -96,9 +104,8 @@ Bar Orientation	Vertical
 ✅ Click "Run" to generate the chart.
 
 🐞 Troubleshooting Java/Spark for Superset-PySpark-Postgres
-bash
-Copy
-Edit
+
+
 # Verify Java
 java -version
 $env:JAVA_HOME
